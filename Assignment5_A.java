@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Assignment5_A{    
     public static void main(String[] args){
       Scanner s = new Scanner(System.in); 
-      int [] play = new int[6];
+      int [] play = new int[7];
 
       System.out.println("請投注六個不同的號碼(1~42)並以空格隔開 \n玩家不需自己將號碼由小至大排列： ");
 
