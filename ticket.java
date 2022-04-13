@@ -1,45 +1,28 @@
-import java.util.Random;
-import javax.swing.JOptionPane;
-public class ticket{
-    public static void main(String [] args){
-        int input;
-        String ans="";
-        input=JOptionPane.showConfirmDialog(null,"開始玩迷你樂透?","Select",JOptionPane.YES_NO_CANCEL_OPTION);
-        ans=ans+input;
-        switch(Integer.parseInt(ans)){
-            case 0:
-            game();
-            break;
-            case 1:;
-            break;
-        }
-        System.exit(1);
+public class Ticket{
+    private int price;
+    private String date;
+    private String name;
 
+    public Ticket ( String date , int price){
+        setDate(date);
+        setPrice(price);
     }
-    public static void game(){
-        Random r = new Random();
-        int b=0, d=0;
-        String a = JOptionPane.showInputDialog("請押第一個數字(1~6 含 1或6):");
-        b = Integer.parseInt(a);
-        String c = JOptionPane.showInputDialog("請押第二個不同的數字(1~6 含 1或6):");
-        d = Integer.parseInt(c);
-        int e = 1, f = 2;
-        if(e == b || e == d){
-            e = r.nextInt(6)+1;
-        }
-        if(e == b || e == d){
-            e = r.nextInt(6)+1;
-        }
-        if(f == b || f == d || f == e){
-            f = r.nextInt(6)+1;
-        }
-        if(f == b || f == d || f == e){
-            f = r.nextInt(6)+1;
-        }
-        if(f == b || f == d || f == e){
-            f = r.nextInt(6)+1;
-        }
-        JOptionPane.showMessageDialog(null,"中獎號碼 : "+e+" "+f+"\n你的號碼 : "+b+" "+d+"\n銘謝惠顧!");
 
+    public Ticket ( String date , String name){
+        setDate(date);
+        setName(name);
+    }
+
+    public void setName(String name){ this.name = name; }
+    public String getName(){ return name; }
+
+    public void setDate(String date){ this.date = date; }
+    public String getDate(){ return date; }
+
+    public void setPrice(int price){ this.price = price; }
+    public int getPrice(){ return price; }
+
+    public String toString(){
+        return  getDate() + (( getName() != null ) ? "送出一張票。" : "售出一張票。")  + (( getName() != null ) ? "貴賓 : " + getName() : "票價 : " + getPrice() );
     }
 }
