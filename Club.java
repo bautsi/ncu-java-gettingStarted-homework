@@ -8,10 +8,7 @@ public class Club {
      setFee(fees);
      numofs = 0;
     }
-    
-   
-   
-   
+
     public void setFee(int fee) {fee = fees;}
     public int getFee() {return fees;}
     
