@@ -1,42 +1,47 @@
 public class Club {
-    private Member enrollment [] = new Member[20];
-    private int numofs;
-    private int total;
+    private Member people[]=new Member[20];
+    private int howmany=0;
+    private int total=0;
     private int fees;
+
+    public void addMember(Member m){
+        if (howmany<20){
+            people [howmany++]= m;
+        }
+    }
     
-    public Club() {
-     setFee(fees);
-     numofs = 0;
+    public void setFee(int fee){
+        fee = fees;
     }
 
-    public void setFee(int fee) {fee = fees;}
-    public int getFee() {return fees;}
-    
-    public int totalFees() {
-     total+=fees;
-     return total;
+    public Club(){
+        setFee(fees);
     }
-   
-    public void addMember(Member m) {
-     
-    
-     if (numofs<20) {
-      enrollment [numofs++]= m;
-     }
-     
+
+    public int getFee(){
+        return fees;
     }
     
-    public String getMember() {
-     String output="";
-     for (int i = 0 ;i <=19; i++) {
-      if (enrollment[i]!=null){
-       output += enrollment[i] + "\n";
-      }
-     }
-     return output;
-     
+    public int totalFees(){
+        for(Member j:people){
+            if(j!=null){
+                total+=j.getFee();
+            }
+        }
+        return total;
     }
-    public String toString() {
+
+    public String getMember(){
+        String output="";
+        for (int i=0 ;i<20;i++){
+            if (people[i]!=null){
+            output += people[i] + "\n";
+            }
+        }
+    return output;
+    }
+
+    public String toString(){
      return getMember();
     }
-   }
+}

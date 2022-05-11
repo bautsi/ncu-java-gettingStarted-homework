@@ -10,16 +10,23 @@ public class Member {
     }
     
     public String getName() {
-     return name;
+        return name;
     }
+
     public void setName(String name) {
-     this.name = name;
+        this.name = name;
     }
+
+
     public int getFee() {
-     return fee;
+        return fee;
     }
+
     public void setFee(int fee) {
-     this.fee = fee;
+        this.fee = fee;
     }
-    public String toString() {return getName() + " Membership fee:" + getFee();} 
+
+    public String toString(){
+        return getName() + " Membership fee:" + getFee();
+    } 
    }
