@@ -1,11 +1,11 @@
 public class MemberManager {
     public static void main(String [] args){
-        Member m [] = new Member[5];
-        m[0] = new Member("Lee",  50000);
-        m[1] = new Member("Wang", 30000);
-        m[2] = new Member("Chen", 80000);
-        m[3] = new Member("Wu",   40000);
-        m[4] = new Member("Lin",  40000);
+        Members m [] = new Members[5];
+        m[0] = new Members("Lee",  50000);
+        m[1] = new Members("Wang", 30000);
+        m[2] = new Members("Chen", 80000);
+        m[3] = new Members("Wu",   40000);
+        m[4] = new Members("Lin",  40000);
         for(int i=0;i<=4;i++){
             System.out.println(m[i]);
         }
