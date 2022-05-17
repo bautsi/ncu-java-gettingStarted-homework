@@ -1,32 +1,16 @@
-public class Member {
+public class Member{
     private String name;
     private int fee;
-    
-    
-    public Member(String name, int fee) {
-     setName(name);
-     setFee(fee);
-     
-    }
-    
-    public String getName() {
-        return name;
+
+    public Member(String name, int fee){
+        setName(name);
+        setFee(fee);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name){this.name=name;}
+    public String getName(){return name;}
+    public void setFee(int fee){this.fee=fee;}
+    public int getFee(){return fee;}
 
-
-    public int getFee() {
-        return fee;
-    }
-
-    public void setFee(int fee) {
-        this.fee = fee;
-    }
-
-    public String toString(){
-        return getName() + " Membership fee:" + getFee();
-    } 
-   }
+    public String toString(){return getName()+" "+"\tMembership fee:"+getFee()+"\n";}
+}
