@@ -1,47 +1,30 @@
-public class Club {
-    private Member people[]=new Member[20];
-    private int howmany=0;
-    private int total=0;
-    private int fees;
-
+public class Club{
+    private Member list[];
+    public Club(){list=new Member[20];}
     public void addMember(Member m){
-        if (howmany<20){
-            people [howmany++]= m;
+        for(int i=0;i<list.length;i++){
+            if(list[i]==null){
+                list[i]=m;
+                break;
+            }
         }
     }
-    
-    public void setFee(int fee){
-        fee = fees;
-    }
-
-    public Club(){
-        setFee(fees);
-    }
-
-    public int getFee(){
-        return fees;
-    }
-    
-    public int totalFees(){
-        for(Member j:people){
-            if(j!=null){
-                total+=j.getFee();
+    public int totalFee(){
+        int total=0;
+        for(int i=0;i<list.length;i++){
+            if(list[i]!=null){
+                total+=list[i].getFee();
             }
         }
         return total;
     }
-
-    public String getMember(){
-        String output="";
-        for (int i=0 ;i<20;i++){
-            if (people[i]!=null){
-            output += people[i] + "\n";
+    public String toString(){
+        String message="";
+        for(int i=0;i<list.length;i++){
+            if(list[i]!=null){
+                message+=list[i]; //呼叫toString
             }
         }
-    return output;
-    }
-
-    public String toString(){
-     return getMember();
+        return message;
     }
 }
