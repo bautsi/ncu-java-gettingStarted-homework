@@ -5,6 +5,6 @@ public class MemberManagement{
         c.addMember(new Member("Mary",500));
         c.addMember(new Member("Helen",100));
         System.out.print(c);
-        System.out.println("Total revenue from membership fee:"+ c.totalFees());
+        System.out.println("Total revenue from membership fee:"+ c.totalFee());
     }
 }
