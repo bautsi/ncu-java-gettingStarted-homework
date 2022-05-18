@@ -13,6 +13,6 @@ public class Graduate extends Student{
     public String getAdvisor(){return advisor;}
 
     public String toString(){
-        return "Name: "+getName()+"\tMajor: "+getMajor()+"\tTution: ";
+        return "Name: "+getName()+"\tMajor: "+getMajor()+"\tAdvisor: "+getAdvisor()+"\tTution: ";
     }
 }

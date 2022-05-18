@@ -9,7 +9,7 @@ public class Registration{
         System.out.println(u1.tuition());
 
 
-        //Graduate u2 =new Graduate("Jack", "MIS", "Prof.CYCHEN");
+        //Graduate u2 =new Graduate("Jack", "MIS", 0, "Prof.CYCHEN");
         //u2.addCredits(1);
         //u2.addCredits(1);
         //System.out.print(u2);
