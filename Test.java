@@ -4,7 +4,7 @@ public class Test{
         //B b=a; //用不到了
         C c=a;
         
-        c.m2();
+        c.m2(); //OK
         //b.m3(); //因C沒有m3()所以不能DMB
     }
 }
