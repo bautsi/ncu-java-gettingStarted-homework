@@ -1,8 +1,8 @@
-public class Test{
+public class Test1{
     public static void main(String [] args){
-        A a=new A();
+        A1 a=new A1();
         //B b=a; //用不到了
-        C c=a;
+        C1 c=a;
         
         c.m2(); //OK
         //b.m3(); //因C沒有m3()所以不能DMB

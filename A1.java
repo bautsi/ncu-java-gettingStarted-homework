@@ -1,4 +1,4 @@
-public class A extends B{
+public class A1 extends B1{
     public void m1(){
         System.out.println("A's m2().");
     }
